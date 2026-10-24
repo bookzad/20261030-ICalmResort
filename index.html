@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ทริปชะอำ 30–31 ต.ค.</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#12343B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ทริปชะอำ">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Anuphan:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#E3E7E2; --surface:#F4F6F2; --ink:#12343B; --ink-2:#4B6567; --line:#9DB2AE;
+  --sugar:#A9651A; --palm:#3F6B4E; --sea:#2F6E78;
+  --disp:"Chonburi", "Noto Serif Thai", Georgia, serif;
+  --body:"Anuphan", "Noto Sans Thai", system-ui, sans-serif;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0F2328; --surface:#17313A; --ink:#E4ECE8; --ink-2:#A9BDBA; --line:#3F5D61;
+          --sugar:#E1A352; --palm:#86B795; --sea:#7FC0C8; color-scheme:dark; }
+}
+*,*::before,*::after { box-sizing:inherit; }
+html { scroll-padding-top:env(safe-area-inset-top,0px); }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.7; -webkit-text-size-adjust:100%; }
+a { color:inherit; }
+:focus-visible { outline:3px solid var(--sugar); outline-offset:3px; border-radius:4px; }
+.wrap { max-width:720px; margin:0 auto; padding:0 20px; }
+
+/* hero */
+.hero { background:var(--ink); color:var(--bg); position:relative; overflow:hidden; }
+@media (prefers-color-scheme: dark) { .hero { background:#0A181C; color:var(--ink); } }
+.hero .wrap { padding-top:48px; padding-bottom:0; position:relative; z-index:1; }
+.hero h1 { font-family:var(--disp); font-weight:400; font-size:clamp(52px,15vw,96px); line-height:1.05; margin:0; letter-spacing:-0.01em; }
+.hero .dates { font-size:19px; margin:10px 0 4px; font-weight:500; }
+.hero .sum { margin:0; opacity:.78; font-size:15px; }
+.ridge { display:block; width:100%; height:auto; margin-top:28px; }
+.ridge .hill { fill:var(--bg); }
+.ridge .sun { fill:var(--sugar); }
+
+/* route strip */
+.strip { background:var(--bg); }
+.strip ol { list-style:none; margin:0; padding:6px 20px 22px; display:flex; align-items:center; gap:0; overflow-x:auto; scrollbar-width:none; max-width:720px; margin-inline:auto; }
+.strip ol::-webkit-scrollbar { display:none; }
+.strip .pt { flex:none; position:relative; padding-top:18px; font-size:13px; font-weight:600; white-space:nowrap; }
+.strip .pt::before { content:""; position:absolute; top:3px; left:50%; width:10px; height:10px; margin-left:-5px; border-radius:50%; background:var(--ink); }
+.strip .pt.night::before { background:var(--sugar); box-shadow:0 0 0 4px color-mix(in srgb,var(--sugar) 25%,transparent); }
+.strip .seg { flex:none; min-width:46px; height:2px; background:var(--line); margin:0 6px; position:relative; align-self:flex-start; margin-top:7px; }
+.strip .seg span { position:absolute; top:-19px; left:0; right:0; text-align:center; font-size:11px; color:var(--ink-2); }
+.strip-note { max-width:720px; margin:0 auto; padding:0 20px 8px; font-size:13px; color:var(--ink-2); }
+
+/* stay card */
+.stay-card { margin:24px auto 0; display:grid; grid-template-columns:120px 1fr; gap:16px; align-items:center; background:var(--surface); border-radius:14px; padding:12px; }
+.stay-card img { width:120px; height:96px; object-fit:cover; border-radius:9px; display:block; }
+.stay-card p { margin:0; font-size:15px; color:var(--ink-2); }
+.stay-card h2 { font-family:var(--disp); font-weight:400; font-size:22px; margin:0 0 2px; line-height:1.3; }
+.stay-card a { text-decoration:none; }
+.stay-card a:hover h2 { text-decoration:underline; }
+
+/* day */
+.day { padding:48px 0 8px; }
+.day-head { border-left:4px solid var(--sugar); padding-left:16px; margin-bottom:28px; }
+.day-n { margin:0; font-size:15px; color:var(--sugar); font-weight:600; }
+.day-head h2 { font-family:var(--disp); font-weight:400; font-size:clamp(30px,8vw,40px); line-height:1.2; margin:2px 0 4px; }
+.theme { margin:0; font-size:17px; }
+.day-meta { margin:2px 0 14px; font-size:14px; color:var(--ink-2); }
+.btn { display:inline-block; background:var(--ink); color:var(--bg); text-decoration:none; font-weight:600; font-size:15px; padding:11px 18px; border-radius:999px; }
+.btn:hover { background:var(--sea); }
+
+.timeline { list-style:none; margin:0; padding:0; }
+.stop { display:grid; grid-template-columns:62px 22px 1fr; column-gap:10px; }
+.t { font-family:var(--disp); font-size:19px; line-height:1.5; text-align:right; padding-top:1px; }
+.node { position:relative; }
+.node::before { content:""; position:absolute; left:50%; top:0; bottom:0; width:2px; margin-left:-1px; background:var(--line); }
+.node::after { content:""; position:absolute; left:50%; top:8px; width:14px; height:14px; margin-left:-7px; border-radius:50%; background:var(--surface); border:3px solid var(--ink); }
+.k-fuel .node::after { border-color:var(--palm); width:12px; height:12px; margin-left:-6px; top:9px; }
+.k-stay .node::after { background:var(--sugar); border-color:var(--sugar); }
+.k-home .node::after { background:var(--ink); }
+.timeline > li:first-child .node::before { top:12px; }
+.timeline > li:last-child .node::before { bottom:auto; height:12px; }
+.body { padding-bottom:22px; min-width:0; }
+.body h3 { margin:0; font-size:19px; font-weight:600; line-height:1.45; }
+.place { text-decoration-color:var(--sugar); text-decoration-thickness:2px; text-underline-offset:4px; }
+.place.plain { color:var(--ink-2); font-weight:500; }
+.place:hover { color:var(--sea); }
+.note { margin:4px 0 0; color:var(--ink-2); font-size:15.5px; max-width:60ch; }
+.tag { display:inline-block; font-size:12.5px; font-weight:600; border-radius:6px; padding:1px 8px; margin-bottom:4px; }
+.tag.fuel { color:var(--palm); background:color-mix(in srgb,var(--palm) 14%,transparent); }
+.tag.stay { color:var(--sugar); background:color-mix(in srgb,var(--sugar) 15%,transparent); }
+.photo { margin:12px 0 0; }
+.photo img { display:block; width:100%; max-width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; background:var(--surface); }
+.photo figcaption { font-size:12px; color:var(--ink-2); margin-top:5px; }
+
+.leg { display:grid; grid-template-columns:62px 22px 1fr; column-gap:10px; }
+.leg::before { content:""; }
+.leg .leg-km { grid-column:2 / 4; position:relative; font-size:13px; color:var(--ink-2); padding:2px 0 14px 30px; }
+.leg .leg-km::before { content:""; position:absolute; left:10px; top:0; bottom:0; border-left:2px dashed var(--line); }
+
+footer { padding:40px 0 48px; font-size:13px; color:var(--ink-2); }
+@media (max-width:420px) {
+  .stop, .leg { grid-template-columns:50px 20px 1fr; column-gap:8px; }
+  .t { font-size:16px; }
+  .stay-card { grid-template-columns:96px 1fr; }
+  .stay-card img { width:96px; height:80px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ridge .sun { animation:rise 1.6s ease-out both; }
+  @keyframes rise { from { transform:translateY(40px); opacity:0; } to { transform:none; opacity:1; } }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="wrap">
+  <h1>ชะอำ</h1>
+  <p class="dates">ศุกร์ 30 – เสาร์ 31 ตุลาคม 2569</p>
+  <p class="sum">2 วัน 1 คืน ขับรถไปกลับราว 364 กม.</p>
+ </div>
+ <svg class="ridge" viewBox="0 0 720 120" preserveAspectRatio="none" aria-hidden="true">
+  <circle class="sun" cx="560" cy="86" r="28"/>
+  <path class="hill" d="M0 120 V96 C40 92 70 88 96 80 C118 73 128 52 146 50 C160 48 168 66 182 64 C200 61 206 36 224 30 C244 24 252 48 266 52 C284 57 296 44 312 46 C334 49 344 70 370 76 C410 86 470 90 520 94 C600 100 660 100 720 98 V120 Z"/>
+ </svg>
+</header>
+
+<nav class="strip" aria-label="เส้นทางทั้งทริป (กม.)">
+ <ol><li class="pt"><span>บ้าน</span></li><li class="seg"><span>86</span></li><li class="pt"><span>วังมะนาว</span></li><li class="seg"><span>70</span></li><li class="pt"><span>เขานางพันธุรัต</span></li><li class="seg"><span>10</span></li><li class="pt"><span>มาลัย ฟาร์ม</span></li><li class="seg"><span>8</span></li><li class="pt"><span>นำจิตต์</span></li><li class="seg"><span>1</span></li><li class="pt"><span>โลตัส ชะอำ</span></li><li class="seg"><span>4</span></li><li class="pt night"><span>I Calm</span></li><li class="seg"><span>5</span></li><li class="pt"><span>วัดชะอำคีรี</span></li><li class="seg"><span>17</span></li><li class="pt"><span>คาเฟ่แมว</span></li><li class="seg"><span>23</span></li><li class="pt"><span>ท่ายาง</span></li><li class="seg"><span>140</span></li><li class="pt"><span>บ้าน</span></li></ol>
+</nav>
+
+<main class="wrap">
+ <div class="stay-card">
+  <a href="https://www.google.com/maps/search/?api=1&query=I%20Calm%20Resort&query_place_id=ChIJJ_4KwVMD_TARveUDGW0W3EM" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLc-wNFU1nR_2QU9pOOSflLXCoF-wpILDm-z56sOb471aGkaGzeSvoLwjJ-pByOZbDFlqSusMrRArM1Qixz_0j4vx7GKNzRviUwOs80gqwAQGzIoYt4ZkXvISfdF_NT43Yhgvwy9NGl5K7Y=s4800-w800-h600" alt="I Calm Resort" referrerpolicy="no-referrer"></a>
+  <div>
+   <a href="https://www.google.com/maps/search/?api=1&query=I%20Calm%20Resort&query_place_id=ChIJJ_4KwVMD_TARveUDGW0W3EM" target="_blank" rel="noopener"><h2>I Calm Resort</h2></a>
+   <p>คืนวันศุกร์ 30 ต.ค. เช็กอินราว 14.00 น. รีสอร์ตริมหาดชะอำ ห้องวิวทะเล</p>
+  </div>
+ </div>
+<section class="day" id="day1">
+ <header class="day-head">
+  <p class="day-n">วันที่ 1</p>
+  <h2>ศุกร์ 30 ต.ค.</h2>
+  <p class="theme">ขึ้นเขา ให้อาหารสัตว์ แล้วเช็กอินริมทะเล</p>
+  <p class="day-meta">ระยะทางรวม 179 กม.</p>
+  <a class="btn" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=I%20Calm%20Resort&destination_place_id=ChIJJ_4KwVMD_TARveUDGW0W3EM&waypoints=%E0%B8%9B%E0%B8%95%E0%B8%97.%20%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B8%A1%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A7%20%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%201%7C%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%B1%E0%B8%95%7C%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%20%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1%7C%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B3%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%95%E0%B9%8C%20%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9D%E0%B8%A3%E0%B8%B1%E0%B9%88%E0%B8%87%7CAltervim%20%E0%B9%82%E0%B8%A5%E0%B8%95%E0%B8%B1%E0%B8%AA%20%E0%B8%8A%E0%B8%B0%E0%B8%AD%E0%B8%B3-%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%A3%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5" target="_blank" rel="noopener">เปิดเส้นทางวันนี้ใน Google Maps</a>
+ </header>
+ <ol class="timeline">
+<li class="stop k-home">
+  <time class="t">06.00</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><h3><span class="place plain">ออกจากบ้าน</span></h3></div>
+</li>
+<li class="leg" aria-label="ขับรถ 86 กิโลเมตร"><span class="leg-km">ขับ 86 กม.</span></li><li class="stop k-fuel">
+  <time class="t">07.00</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><span class="tag fuel">แวะพัก / พลังงาน</span><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B8%95%E0%B8%97.%20%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B8%A1%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A7%20%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%201" target="_blank" rel="noopener">ปตท. วังมะนาว สาขา 1</a></h3><p class="note">แวะพัก เติมน้ำมัน ทานอาหารเช้า</p></div>
+</li>
+<li class="leg" aria-label="ขับรถ 70 กิโลเมตร"><span class="leg-km">ขับ 70 กม.</span></li><li class="stop k-stop">
+  <time class="t">08.30</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%B1%E0%B8%95&query_place_id=ChIJR1HJJlYc_TARLykWJ8YUgE4" target="_blank" rel="noopener">วนอุทยานเขานางพันธุรัต</a></h3><p class="note">เปิด 08.30–17.00 น. ทางเดินช่วงแรกปูพื้นเรียบ ช่วงบนชันและเป็นหิน ใส่รองเท้าผ้าใบ พกน้ำ และระวังลิง</p><figure class="photo"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLcmHNFUkgJOy_5Ka2HJnePm8Y1zIvkrYUq_aYaUNs1YUiXedqyzMDbdF3w_avdB2rm4SvkGPFPWj60LVevCmnnkYmDXXD6yqvM4t6ygTatieZoQSzjijLeufJWeHqZG5Lx-eCs7NLqzl-3k=s4800-w800-h600" alt="วนอุทยานเขานางพันธุรัต" loading="lazy" referrerpolicy="no-referrer"><figcaption>ภาพจาก Google Maps โดย วรกานต์ ยืนยง</figcaption></figure></div>
+</li>
+<li class="leg" aria-label="ขับรถ 10 กิโลเมตร"><span class="leg-km">ขับ 10 กม.</span></li><li class="stop k-stop">
+  <time class="t">10.30</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%20%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1&query_place_id=ChIJPWpj45cd_TAR5DGEcbj6fz4" target="_blank" rel="noopener">มาลัย ฟาร์ม</a></h3><p class="note">เปิด 08.00–17.30 น. ให้อาหารสัตว์ได้ใกล้ชิด ร้านขายอาหารสัตว์ด้านในรับเฉพาะเงินสด</p><figure class="photo"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLd38CF4fV31nKH9IUvaNe9U973vNx-ynZmy13w46tSM6lLtIzSRKNRstnm72Y-Kgxx6Lt-h5Pr7E6RL1ZXYQjOw3dPnJ1iItquSJIrKSO6KKkHVIrG-u-1bB_u0ie1k2UsLscJ-FQ=s4800-w800-h600" alt="มาลัย ฟาร์ม" loading="lazy" referrerpolicy="no-referrer"><figcaption>ภาพจาก Google Maps โดย Mark S</figcaption></figure></div>
+</li>
+<li class="leg" aria-label="ขับรถ 8 กิโลเมตร"><span class="leg-km">ขับ 8 กม.</span></li><li class="stop k-stop">
+  <time class="t">12.00</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B3%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%95%E0%B9%8C%20%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9D%E0%B8%A3%E0%B8%B1%E0%B9%88%E0%B8%87&query_place_id=ChIJpTYALkoD_TARHrIHbdMsDpc" target="_blank" rel="noopener">ร้านนำจิตต์ ก๋วยเตี๋ยวหมูหน่อไม้ฝรั่ง</a></h3><p class="note">เปิด 07.30–15.30 น. (ปิดวันพุธ) ช่วงเที่ยงคิวยาว รับบัตรคิวตอนมาถึง ลองเมนูต้มยำ</p><figure class="photo"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLf41SbWAKqkofdMVbO6huFRBqFuqsUL6dz0tqMpk2Arr0HHLz7NZv8RvS6sgUGeHWYq3pXJ7kaFbV5UgRqdyEaG9pRJlpR16iUeB5Up5slakV5a7brVoCipemQw5GE_xcPFExeBgo5e7f0=s4800-w800-h600" alt="ร้านนำจิตต์ ก๋วยเตี๋ยวหมูหน่อไม้ฝรั่ง" loading="lazy" referrerpolicy="no-referrer"><figcaption>ภาพจาก Google Maps โดย pat nok</figcaption></figure></div>
+</li>
+<li class="leg" aria-label="ขับรถ 1 กิโลเมตร"><span class="leg-km">ขับ 1 กม.</span></li><li class="stop k-fuel">
+  <time class="t">13.00</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><span class="tag fuel">แวะพัก / พลังงาน</span><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=Altervim%20%E0%B9%82%E0%B8%A5%E0%B8%95%E0%B8%B1%E0%B8%AA%20%E0%B8%8A%E0%B8%B0%E0%B8%AD%E0%B8%B3-%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%A3%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&query_place_id=ChIJa7zlnwMD_TARG9wKc5MClFI" target="_blank" rel="noopener">Altervim โลตัส ชะอำ-เพชรบุรี</a></h3><p class="note">จุดชาร์จ EV เปิด 24 ชม. หัว DC 2 หัว</p></div>
+</li>
+<li class="leg" aria-label="ขับรถ 4 กิโลเมตร"><span class="leg-km">ขับ 4 กม.</span></li><li class="stop k-stay">
+  <time class="t">14.00</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><span class="tag stay">ที่พัก 1 คืน</span><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=I%20Calm%20Resort&query_place_id=ChIJJ_4KwVMD_TARveUDGW0W3EM" target="_blank" rel="noopener">I Calm Resort</a></h3><p class="note">เช็กอิน ฝั่งตรงข้ามถนนคือหาดชะอำช่วงเงียบ ๆ มี 7-Eleven อยู่ใกล้</p><figure class="photo"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLc-wNFU1nR_2QU9pOOSflLXCoF-wpILDm-z56sOb471aGkaGzeSvoLwjJ-pByOZbDFlqSusMrRArM1Qixz_0j4vx7GKNzRviUwOs80gqwAQGzIoYt4ZkXvISfdF_NT43Yhgvwy9NGl5K7Y=s4800-w800-h600" alt="I Calm Resort" loading="lazy" referrerpolicy="no-referrer"><figcaption>ภาพจาก Google Maps โดย ไอคาม รีสอร์ท ชะอำ</figcaption></figure></div>
+</li>
+ </ol>
+</section>
+<section class="day" id="day2">
+ <header class="day-head">
+  <p class="day-n">วันที่ 2</p>
+  <h2>เสาร์ 31 ต.ค.</h2>
+  <p class="theme">ไหว้พระ เล่นกับแมว แล้วขับกลับบ้าน</p>
+  <p class="day-meta">ระยะทางรวม 185 กม.</p>
+  <a class="btn" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=%E0%B8%9B%E0%B8%95%E0%B8%97.%20%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%87%20%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%A3%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&waypoints=%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%8A%E0%B8%B0%E0%B8%AD%E0%B8%B3%E0%B8%84%E0%B8%B5%E0%B8%A3%E0%B8%B5%20%28%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%8A%E0%B8%B0%E0%B8%AD%E0%B8%B3%29%7CKitten%20Cafe%20Phetchaburi%20%28%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%E0%B9%81%E0%B8%A1%E0%B8%A7%29" target="_blank" rel="noopener">เปิดเส้นทางวันนี้ใน Google Maps</a>
+ </header>
+ <ol class="timeline">
+<li class="leg" aria-label="ขับรถ 5 กิโลเมตร"><span class="leg-km">ขับ 5 กม.</span></li><li class="stop k-stop">
+  <time class="t">10.00</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%8A%E0%B8%B0%E0%B8%AD%E0%B8%B3%E0%B8%84%E0%B8%B5%E0%B8%A3%E0%B8%B5%20%28%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%8A%E0%B8%B0%E0%B8%AD%E0%B8%B3%29&query_place_id=ChIJX4MxyNsd_TARu0aAZLuaZkw" target="_blank" rel="noopener">วัดชะอำคีรี (วัดชะอำ)</a></h3><p class="note">เดินขึ้นบันไดไปถ้ำพระ และแวะชมโบสถ์ที่ตกแต่งภายในสวยงาม</p><figure class="photo"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLefnnaylSWeTYRIyduXQpDhWhSk1DcrV17xuG3pAtBzD6jjWtd-OgpxVnPE7omSs9-lItm04mjYXo0ALJeBYR1pav5TCBzgJwNa5C6-9j6mReEmDgQEz2scgFxKCl8oMcu5fAhwoYaR1HpK=s4800-w800-h600" alt="วัดชะอำคีรี (วัดชะอำ)" loading="lazy" referrerpolicy="no-referrer"><figcaption>ภาพจาก Google Maps โดย Pimthada Woraratthanapatch</figcaption></figure></div>
+</li>
+<li class="leg" aria-label="ขับรถ 17 กิโลเมตร"><span class="leg-km">ขับ 17 กม.</span></li><li class="stop k-stop">
+  <time class="t">11.00</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=Kitten%20Cafe%20Phetchaburi%20%28%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%E0%B9%81%E0%B8%A1%E0%B8%A7%29&query_place_id=ChIJI1G4QR4Z_TARDW5DQGkSdUY" target="_blank" rel="noopener">Kitten Cafe Phetchaburi (คาเฟ่แมว)</a></h3><p class="note">เปิด 09.00–18.00 น. มีเครื่องดื่มและอาหาร</p><figure class="photo"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLe-v8yi41PqDTssXDRbS-WGrPdEruIwKfZHfB69wnNgh2yyMDiwhegbJTCSW0Rk0xWEsbYCoB4x1aNgKKxdZ8V8u5IyeNm0y-JwUmm6duDzqWzqkkaeCsABlpeGYQ0a0xJgRKO_ygH12A4h=s4800-w800-h600" alt="Kitten Cafe Phetchaburi (คาเฟ่แมว)" loading="lazy" referrerpolicy="no-referrer"><figcaption>ภาพจาก Google Maps โดย Kitten Cafe Phetchaburi</figcaption></figure></div>
+</li>
+<li class="leg" aria-label="ขับรถ 23 กิโลเมตร"><span class="leg-km">ขับ 23 กม.</span></li><li class="stop k-fuel">
+  <time class="t">12.30</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><span class="tag fuel">แวะพัก / พลังงาน</span><h3><a class="place" href="https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B8%95%E0%B8%97.%20%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%87%20%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%A3%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5" target="_blank" rel="noopener">ปตท. ท่ายาง เพชรบุรี</a></h3><p class="note">แวะพัก เติมน้ำมัน ก่อนขับยาวกลับบ้าน</p></div>
+</li>
+<li class="leg" aria-label="ขับรถ 140 กิโลเมตร"><span class="leg-km">ขับ 140 กม.</span></li><li class="stop k-home">
+  <time class="t">15.00</time>
+  <span class="node" aria-hidden="true"></span>
+  <div class="body"><h3><span class="place plain">ถึงบ้าน</span></h3></div>
+</li>
+ </ol>
+</section>
+</main>
+<footer class="wrap">
+ ข้อมูลจากแผนทริปที่ส่งมา (2 วัน 11 จุดแวะ) เวลาเปิด–ปิดอ้างอิง Google Maps ควรเช็กอีกครั้งก่อนออกเดินทาง ภาพทั้งหมดจาก Google Maps
+</footer>
+</body>
+</html>
